@@ -15,7 +15,7 @@ st.write('Hello, *World!* :sunglasses:')
 st.write(1234)
 d = requests.get("https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=warnsum&lang=tc")
 d = d.json()
-st.write(d['WTS'])
+st.write(d)
 # Example 3
 
 df = pd.DataFrame({
@@ -35,4 +35,5 @@ df2 = pd.DataFrame(
      columns=['a', 'b', 'c'])
 c = alt.Chart(df2).mark_circle().encode(
      x='a', y='b', size='c', color='c', tooltip=['a', 'b', 'c'])
+
 st.write(c)
